@@ -1,1 +1,5 @@
-
+class Player {
+  constructor(player) {
+    
+  }
+}
