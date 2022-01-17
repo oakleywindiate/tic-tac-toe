@@ -1,1 +1,18 @@
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: 0;
+  background: #18191A;
+  color: #FFE48D;
+  letter-spacing: 5px;
+}
 
+.all-game-squares {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px 20px;
+  border: 20px;
+  background: white;
+}
