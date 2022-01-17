@@ -1,14 +1,8 @@
-html {
+html, body {
   font-family: 'Montserrat', sans-serif;
-}
-
-body {
   height: 100vh;
   margin: 0;
   background: #18191A;
   color: #FFE48D;
-}
-
-h1 {
   letter-spacing: 5px;
 }
