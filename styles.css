@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   height: 100vh;
   margin: 0;
   background: #18191A;
@@ -18,6 +18,9 @@ body {
   0 0 40px #B5179E,
   0 0 60px #B5179E;
   letter-spacing: 5px;
+  text-decoration: none;
+  align-content: center;
+  text-align: center;
 }
 
 /* .hidden {
@@ -87,6 +90,36 @@ h1, h2{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  cursor: pointer;
 }
 
 /* ----------GAMEPLAY SECTION------------ */
+
+.player-one-stats, .player-two-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  line-height: 40px;
+  font-size: 20px;
+  padding: 2%;
+}
+
+.player-one-stats {
+  float: left;
+  padding-left: 10%;
+}
+
+.player-two-stats {
+  float: right;
+  padding-right: 10%;
+}
+
+.player-one-score {
+  font-size: 100px;
+}
+
+.player-two-score {
+  font-size: 100px;
+}
