@@ -19,6 +19,8 @@ body {
   0 0 60px #B5179E;
   letter-spacing: 5px;
   text-decoration: none;
+  align-content: center;
+  text-align: center;
 }
 
 /* .hidden {
@@ -97,15 +99,16 @@ h1, h2{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 3%;
   align-items: center;
   margin: 0;
+  line-height: 40px;
+  font-size: 20px;
+  padding: 2%;
 }
 
 .player-one-stats {
   float: left;
   padding-left: 10%;
-
 }
 
 .player-two-stats {
@@ -113,12 +116,10 @@ h1, h2{
   padding-right: 10%;
 }
 
-/* .player-two-name,
-.player-two-score,
-.player-two-wins {
-  padding: 5%;
-} */
+.player-one-score {
+  font-size: 100px;
+}
 
-.player-one-stats > *, .player-two-stats > * {
-  padding: 10%;
+.player-two-score {
+  font-size: 100px;
 }
