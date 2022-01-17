@@ -9,9 +9,20 @@ body {
   height: 100vh;
   margin: 0;
   background: #18191A;
-  color: #FFE48D;
+  color: #ffffff;
+  text-shadow:
+  0 0 5px #ffffff,
+  0 0 8px #B5179E,
+  0 0 20px #B5179E,
+  0 0 30px #B5179E,
+  0 0 40px #B5179E,
+  0 0 60px #B5179E;
   letter-spacing: 5px;
 }
+
+/* .hidden {
+  display: none!important;
+} */
 
 h1 {
   padding-top: 50px;
