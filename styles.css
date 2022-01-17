@@ -1,4 +1,12 @@
-html, body {
+* {
+  box-sizing: border-box;
+}
+
+html {
+
+}
+
+body {
   font-family: 'Montserrat', sans-serif;
   height: 100vh;
   margin: 0;
@@ -7,12 +15,47 @@ html, body {
   letter-spacing: 5px;
 }
 
+h1 {
+  padding-top: 50px;
+}
+
+h1, h2{
+  display: flex;
+  justify-content: space-around;
+}
+
 .all-game-squares {
   display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #ffffff;
+  background-color: #18191A;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 20px 20px;
-  border: 20px;
-  background: white;
+}
+
+.top {
+  border-top: none;
+}
+
+.bot {
+  border-bottom: none;
+}
+
+.top, .mid, .bot {
+  border-left: none;
+}
+
+.right {
+  border-right: none;
 }
