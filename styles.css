@@ -90,3 +90,16 @@ h1, h2{
 }
 
 /* ----------GAMEPLAY SECTION------------ */
+
+.player-one-stats, .player-two-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-one-stats {
+  float: left;
+}
+
+.player-two-stats {
+  float: right;
+}
