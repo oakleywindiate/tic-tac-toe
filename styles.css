@@ -51,7 +51,12 @@ h1, h2{
   height: 100px;
   width: 100px;
   border: 1px solid #ffffff;
-  background-color: #18191A;
+  box-shadow:
+  0 0 5px #ffffff,
+  0 0 8px #B5179E,
+  0 0 20px #B5179E,
+  0 0 40px #B5179E;
+  background-color: transparent;
   align-items: center;
 }
 
@@ -82,4 +87,10 @@ h1, h2{
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+}
+
+/* ----------GAMEPLAY SECTION------------ */
+
+.player-stats {
+  display: flex;
 }
