@@ -20,10 +20,11 @@ allGameSquares.addEventListener('click', function(e) {
 /* -------- FUNCTIONS --------*/
 
 function setEmoji(e) {
-  var boardID = e.target.id - 1;
-  var currentPlayer = game.players[game.turn -1]
-  if (game.gameBoard[boardID] === null) {
-    game.gameplay(boardID, currentPlayer)
+  var boardIndex = e.target.id - 1;
+  var currentPlayerIndex = game.turn - 1;
+  var currentPlayer = game.players[currentPlayerIndex];
+  if (game.gameBoard[boardIndex] === null) {
+    game.gameplay(boardIndex, currentPlayer)
     e.target.classList += ` ${currentPlayer.emoji}`;
   }
 }
