@@ -125,11 +125,11 @@ h1, h2{
 }
 
 .monster::after {
-  text: '👾'
+  property: '👾'
 }
 
 .spaceship::after {
-  text" '🚀'
+  property: '🚀'
 }
 
 .monster, .spaceship {
