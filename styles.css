@@ -123,3 +123,10 @@ h1, h2{
 .player-two-score {
   font-size: 100px;
 }
+
+.emoji {
+  font-size: 82px;
+  text-shadow: 0 0 0px #ffffff;
+  text-align: center;
+  visibility: hidden;
+}
