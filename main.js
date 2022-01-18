@@ -17,15 +17,11 @@ allGameSquares.addEventListener('click', function(e) {
   setEmoji(e);
 });
 
-/* -------- VARIABLES --------*/
-
-
 /* -------- FUNCTIONS --------*/
 
 function setEmoji(e) {
   var boardID = e.target.id - 1;
   var currentPlayer = game.players[game.turn -1]
-
   if (game.gameBoard[boardID] === null) {
     game.gameplay(boardID, currentPlayer)
     e.target.classList += ` ${currentPlayer.emoji}`;
