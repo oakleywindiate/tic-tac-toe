@@ -40,14 +40,13 @@ function determineWin() {
     winnerBanner.replaceChildren();
     winnerBanner.innerHTML += `PLAYER 1 WINS!`
     player1.playerOneWin++
-    updateWin()
-  } else if
-    (game.players[1].emoji === 'spaceship' && game.win() === true) {
+  }
+  if (game.players[1].emoji === 'spaceship' && game.win() === true) {
       winnerBanner.replaceChildren();
       winnerBanner.innerHTML += `PLAYER 2 WINS!`
       player2.playerTwoWin++
-      updateWin();
     }
+    updateWin();
     return;
   }
 
@@ -59,7 +58,6 @@ function determineDraw() {
 }
 
 function updateWin() {
-  playerOneScore.replaceChildren();
-  playerOneScore.innerHTML += `${player1.playerOneWin}`;
-
+  playerTwoScore.replaceChildren();
+  playerTwoScore.innerHTML += `${player2.playerTwoWin}`;
 }
