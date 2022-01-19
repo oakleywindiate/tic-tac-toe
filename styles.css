@@ -23,9 +23,9 @@ body {
   text-align: center;
 }
 
-/* .hidden {
+.hidden {
   display: none!important;
-} */
+}
 
 h1 {
   padding-top: 50px;
