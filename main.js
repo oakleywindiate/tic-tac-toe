@@ -51,7 +51,6 @@ function determineWin() {
   }
 }
 
-
 function determineDraw() {
   if (game.counter === 8 && game.win() === false) {
     winnerBanner.innerHTML += `DRAW!`;
