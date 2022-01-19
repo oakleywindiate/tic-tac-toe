@@ -10,7 +10,10 @@ var game = new Game(player1, player2);
 
 var allGameSquares = document.getElementById('allGameSquares');
 var winnerBanner = document.querySelector('.outcome-banner');
+var playerTurn = document.getElementById('playerTurn')
 var square = document.getElementById('square');
+var playerOneScore = document.getElementById('playerOneScore');
+var playerTwoScore = document.getElementById('playerTwoScore');
 
 /* -------- EVENT LISTENERS --------*/
 
@@ -35,19 +38,27 @@ function setEmoji(e) {
 
 function determineWin() {
   if (game.players[0].emoji === 'monster' && game.win() === true) {
+    winnerBanner.replaceChildren();
     winnerBanner.innerHTML += `PLAYER 1 WINS!`
-    player1.playerOneWins++
-  } else if
-    (game.players[1].emoji === 'spaceship' && game.win() === true) {
+    player1.playerOneWin++
+  }
+  if (game.players[1].emoji === 'spaceship' && game.win() === true) {
+      winnerBanner.replaceChildren();
       winnerBanner.innerHTML += `PLAYER 2 WINS!`
-      player2.playerTwoWins++
+      player2.playerTwoWin++
     }
+    updateWin();
+
     return;
   }
 
-
-function determineDraw(e) {
+function determineDraw() {
   if (game.counter === 8 && game.win() === false) {
   winnerBanner.innerHTML += `DRAW!`;
   }
+}
+
+function updateWin() {
+  playerTwoScore.replaceChildren();
+  playerTwoScore.innerHTML += `${player2.playerTwoWin}`;
 }

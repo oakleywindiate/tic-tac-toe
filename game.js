@@ -2,7 +2,8 @@ class Game {
   constructor(player1, player2) {
     this.players = [player1, player2];
     this.turn = 1;
-    this.points = 0;
+    this.playerOnePoints = false;
+    this.playerTwoPoints = false;
     this.gameBoard = new Array(9).fill(null);
     this.stopGame = false;
     this.counter = 0;
