@@ -37,11 +37,13 @@ function setEmoji(e) {
 
 function determineWin() {
   if (game.players[0].emoji === 'monster' && game.win() === true) {
+    winnerBanner.replaceChildren();
     winnerBanner.innerHTML += `PLAYER 1 WINS!`
     player1.playerOneWin++
     updateWin()
   } else if
     (game.players[1].emoji === 'spaceship' && game.win() === true) {
+      winnerBanner.replaceChildren();
       winnerBanner.innerHTML += `PLAYER 2 WINS!`
       player2.playerTwoWin++
       updateWin();
