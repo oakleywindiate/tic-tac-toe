@@ -10,6 +10,7 @@ var game = new Game(player1, player2);
 
 var allGameSquares = document.getElementById('allGameSquares');
 var winnerBanner = document.querySelector('.outcome-banner');
+var playerTurn = document.getElementById('playerTurn')
 var square = document.getElementById('square');
 var playerOneScore = document.getElementById('playerOneScore');
 var playerTwoScore = document.getElementById('playerTwoScore');
@@ -47,9 +48,9 @@ function determineWin() {
       player2.playerTwoWin++
     }
     updateWin();
+
     return;
   }
-
 
 function determineDraw() {
   if (game.counter === 8 && game.win() === false) {
