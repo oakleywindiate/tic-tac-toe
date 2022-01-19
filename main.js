@@ -6,18 +6,6 @@ var player2 = new Player(2, 'spaceship');
 
 var game = new Game(player1, player2);
 
-
-var combinations = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6],
-];
-
 /* -------- QUERY SELECTORS --------*/
 
 var allGameSquares = document.getElementById('allGameSquares');
@@ -28,7 +16,9 @@ var square = document.getElementById('square');
 
 allGameSquares.addEventListener('click', function(e) {
   setEmoji(e);
-  determineWin(e);
+  determineWin();
+  determineDraw();
+  game.counter++
 });
 
 /* -------- FUNCTIONS --------*/
@@ -44,11 +34,20 @@ function setEmoji(e) {
 }
 
 function determineWin() {
-  if (game.win() === true && game.players[0] === player1) {
+  if (game.players[0].emoji === 'monster' && game.win() === true) {
     winnerBanner.innerHTML += `PLAYER 1 WINS!`
-  } else {
-  if(game.win() === true && game.players[1] === player2) {
+    player1.playerOneWins++
+  } else if
+    (game.players[1].emoji === 'spaceship' && game.win() === true) {
       winnerBanner.innerHTML += `PLAYER 2 WINS!`
+      player2.playerTwoWins++
     }
+    return;
+  }
+
+
+function determineDraw(e) {
+  if (game.counter === 8 && game.win() === false) {
+  winnerBanner.innerHTML += `DRAW!`;
   }
 }

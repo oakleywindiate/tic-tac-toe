@@ -4,6 +4,8 @@ class Game {
     this.turn = 1;
     this.points = 0;
     this.gameBoard = new Array(9).fill(null);
+    this.stopGame = false;
+    this.counter = 0;
   }
   gameplay(index, player) {
     if (this.turn === 1) {
@@ -46,7 +48,7 @@ class Game {
       && game.gameBoard[4] === game.gameBoard[6])) {
         return true;
       } else {
-        return false
+        return false;
       }
   }
 }
